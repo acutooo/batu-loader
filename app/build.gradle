@@ -65,7 +65,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
     
     // BlackBox Kütüphanesi (Hatanın Çözümü)
-    implementation 'com.github.Milk-Cool:BlackBox:1.6.0'
+    implementation 'com.github.FBlackBox:BlackBox:2.1.0'
 
     // Android Temel Bileşenler
     implementation("androidx.multidex:multidex:2.0.1")
