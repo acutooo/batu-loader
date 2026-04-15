@@ -1,58 +1,24 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        mavenLocal ()
+        google() // Google kütüphaneleri için standart
         mavenCentral()
-        /*
-        // Do not use mavenCentral()
-        maven {
-            url 'https://repo1.maven.org/maven2'
-        }*/
-        
-        // Do not use google()
-        maven {
-            url 'https://maven.google.com'
-        }
-        
-        maven {
-            url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
-        }
-        
-        maven {
-            url 'https://jitpack.io'
-        }
+        maven { url 'https://jitpack.io' } // BlackBox'ı buradan çekecek
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
     }
     
     dependencies {
         classpath "com.android.tools.build:gradle:8.1.2"
+        // Paranoid'i hata riskine karşı devre dışı bırakmak istersen başına // koyabilirsin
         classpath 'org.lsposed.lsparanoid:gradle-plugin:0.5.2'
-
     }
 }
 
 allprojects {
     repositories {
-        //jcenter()
-        mavenLocal ()
+        google()
         mavenCentral()
-        /*
-        // Do not use mavenCentral()
-        maven {
-            url 'https://repo1.maven.org/maven2'
-        }*/
-        
-        // Do not use google()
-        maven {
-            url 'https://maven.google.com'
-        }
-        
-        maven {
-            url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
-        }
-        
-        maven {
-            url 'https://jitpack.io'
-        }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
     }
 }
 
@@ -62,7 +28,7 @@ task clean(type: Delete) {
 
 ext {
     is64Bit = true;
-    packageName = "com.pubgm";
+    packageName = "com.pubgm.batu"; // Paket adını burada değiştirebilirsin
     ndkVersion = "24.0.8215888";
     abiFilters = is64Bit ? "arm64-v8a" : "armeabi-v7a";
     versionCode = 100;

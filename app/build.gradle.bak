@@ -61,41 +61,34 @@ android {
 
 
 dependencies {
-    // Yerel Kütüphaneler
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
-    
-    // BlackBox Kütüphanesi (Hatanın Çözümü)
-    implementation 'com.github.Milk-Cool:BlackBox:1.6.0'
-
-    // Android Temel Bileşenler
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
-    implementation "androidx.cardview:cardview:1.0.0"
-    
-    // Gerekli Araçlar
     implementation "com.tencent:mmkv-static:1.2.10"
     implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
     implementation 'io.github.molihuan:pathselector:1.1.16'
+    def lottieVersion = "3.4.0" 
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation "com.github.topjohnwu.libsu:core:3.1.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+   // implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
     implementation 'com.blankj:utilcodex:1.31.1'
     implementation 'net.lingala.zip4j:zip4j:2.9.0'
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation 'com.github.techinessoverloaded:progress-dialog:1.5.1'
     implementation 'com.android.volley:volley:1.2.1'
-    
-    // Arayüz ve Animasyon
-    implementation "com.airbnb.android:lottie:3.4.0"
     implementation "com.github.skydoves:powerspinner:1.2.3"
     implementation "io.github.rupinderjeet:kprogresshud:1.0.0"
-    implementation 'com.github.techinessoverloaded:progress-dialog:1.5.1'
-
-    // Yansıma ve Sistem Araçları
-    implementation "com.github.topjohnwu.libsu:core:3.1.1"
+    
     implementation("com.github.tiann:FreeReflection:3.1.0") {
         exclude group: 'me.weishu.reflection'
     }
 
-    // BlackReflection
     implementation "com.github.CodingGay.BlackReflection:core:1.1.4"
     annotationProcessor "com.github.CodingGay.BlackReflection:compiler:1.1.4"
+
+
 }
+
