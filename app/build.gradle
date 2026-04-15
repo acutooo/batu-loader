@@ -64,8 +64,9 @@ dependencies {
     // Yerel Kütüphaneler
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
     
-    // BlackBox Kütüphanesi (Hatanın Çözümü)
-    implementation 'com.github.FBlackBox:BlackBox:2.1.0'
+        // BlackBox Ana Kütüphanesi (Paket ismiyle eşleşen orijinal depo)
+    implementation 'com.github.niunaijun:BlackBox:1.6.0'
+
 
     // Android Temel Bileşenler
     implementation("androidx.multidex:multidex:2.0.1")
