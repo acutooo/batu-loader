@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:textAlignment="viewEnd"
+     tools:ignore="HardcodedText, UseSwitchCompatOrMaterialXml, UselessParent, TooManyViews"
+     android:layout_gravity="start|end">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="horizontal"
+         android:id="@+id/layout_view">
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:visibility="gone"
+             android:id="@+id/layout_icon_control_view">
+
+            <ImageView
+                 android:layout_height="50dp"
+                 android:layout_width="50dp"
+                 android:src="@drawable/icon"
+                 android:adjustViewBounds="true"
+                 android:scaleType="fitCenter"
+                 android:id="@+id/imageview_control" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+             android:layout_height="305dp"
+             android:layout_width="400dp"
+             android:visibility="visible"
+             android:orientation="horizontal"
+             android:id="@+id/layout_main_view">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="60dp"
+                 android:layout_marginEnd="5dp"
+                 android:gravity="center_vertical"
+                 android:background="@drawable/bg_header"
+                 android:padding="8dp"
+                 android:orientation="vertical">
+
+                <LinearLayout
+                     android:layout_height="40dp"
+                     android:layout_width="40dp"
+                     android:layout_marginBottom="8dp"
+                     android:gravity="center"
+                     android:background="@drawable/bgfituronfl"
+                     android:layout_marginTop="8dp"
+                     android:id="@+id/navf1">
+
+                    <ImageView
+                         android:layout_height="30.0dp"
+                         android:layout_width="30.0dp"
+                         android:src="@drawable/eye"
+                         android:textSize="15sp"
+                         android:tint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="40dp"
+                     android:layout_width="40dp"
+                     android:layout_marginBottom="8dp"
+                     android:gravity="center"
+                     android:id="@+id/navf2">
+
+                    <ImageView
+                         android:layout_height="30.0dp"
+                         android:layout_width="30.0dp"
+                         android:src="@drawable/gun"
+                         android:textSize="15sp"
+                         android:tint="@color/white" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                     android:layout_height="40dp"
+                     android:layout_width="40dp"
+                     android:layout_marginBottom="8dp"
+                     android:gravity="center"
+                     android:id="@+id/navf5">
+
+                    <ImageView
+                         android:layout_height="33.0dp"
+                         android:layout_width="33.0dp"
+                         android:src="@drawable/ic_baseline_directions_car_24"
+                         android:textSize="15sp"
+                         android:tint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="40dp"
+                     android:layout_width="40dp"
+                     android:layout_marginBottom="8dp"
+                     android:gravity="center"
+                     android:id="@+id/navf3">
+
+                    <ImageView
+                         android:layout_height="30.0dp"
+                         android:layout_width="30.0dp"
+                         android:src="@drawable/aim"
+                         android:textSize="15sp"
+                         android:tint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="40dp"
+                     android:layout_width="40dp"
+                     android:layout_marginBottom="8dp"
+                     android:gravity="center"
+                     android:id="@+id/navf4">
+
+                    <ImageView
+                         android:layout_height="35.0dp"
+                         android:layout_width="35.0dp"
+                         android:src="@drawable/memory"
+                         android:textSize="15sp"
+                         android:tint="@color/white" />
+
+                </LinearLayout>
+
+                
+
+                <ImageView
+                     android:layout_height="40.0dp"
+                     android:layout_width="40.0dp"
+                     android:layout_marginBottom="8dp"
+                     android:src="@drawable/baseline_close_24"
+                     android:gravity="center"
+                     android:id="@+id/layout_close_main_view" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:background="@drawable/bg_float"
+                 android:orientation="vertical">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/menuf1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/esp_visual" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menuf2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <include layout="@layout/esp_inventory" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menuf3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <include layout="@layout/esp_aimbot" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/menuf4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <include layout="@layout/esp_memory" />
+
+                        </LinearLayout>
+                        
+                        
+
+                        <!-- <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="match_parent" android:layout_height="match_parent" tools:ignore="SpeakableTextPresentCheck" /> -->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

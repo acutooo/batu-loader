@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+    
+    id 'org.lsposed.lsparanoid'
+    
+}
+
+android {
+    namespace rootProject.ext.packageName
+    compileSdk 34
+    buildToolsVersion "34.0.0"
+    ndkVersion "24.0.8215888"
+
+    defaultConfig {
+        applicationId rootProject.ext.packageName
+        minSdk 24
+        targetSdk 28
+        versionCode 1
+        versionName "4.1"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        buildFeatures {
+            buildConfig true
+            viewBinding true
+        }
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation "com.tencent:mmkv-static:1.2.10"
+    implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+    implementation 'io.github.molihuan:pathselector:1.1.16'
+    def lottieVersion = "3.4.0" 
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation "com.github.topjohnwu.libsu:core:3.1.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+   // implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
+    implementation 'com.blankj:utilcodex:1.31.1'
+    implementation 'net.lingala.zip4j:zip4j:2.9.0'
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation 'com.github.techinessoverloaded:progress-dialog:1.5.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation "com.github.skydoves:powerspinner:1.2.3"
+    implementation "io.github.rupinderjeet:kprogresshud:1.0.0"
+    
+    implementation("com.github.tiann:FreeReflection:3.1.0") {
+        exclude group: 'me.weishu.reflection'
+    }
+
+    implementation "com.github.CodingGay.BlackReflection:core:1.1.4"
+    annotationProcessor "com.github.CodingGay.BlackReflection:compiler:1.1.4"
+
+
+}
+

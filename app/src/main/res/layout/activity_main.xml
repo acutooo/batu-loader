@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ANTIBAN"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <!-- Timer Account -->
+        <LinearLayout
+            android:id="@+id/timeraccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_find"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/timer_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/substime"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:fontFamily="@font/cof"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="1dp" />
+
+                <!-- Days -->
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_uuid">
+
+                    <TextView
+                        android:id="@+id/days"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="00"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:fontFamily="@font/cof" />
+
+                    <TextView
+                        android:id="@+id/days_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/day"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cof" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blazered"
+                    android:padding="5dp" />
+
+                <!-- Hours -->
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_uuid">
+
+                    <TextView
+                        android:id="@+id/hours"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="00"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:fontFamily="@font/cof" />
+
+                    <TextView
+                        android:id="@+id/hours_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/hour"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cof" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blazered"
+                    android:padding="5dp" />
+
+                <!-- Minutes -->
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_uuid">
+
+                    <TextView
+                        android:id="@+id/minutes"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="00"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:fontFamily="@font/cof" />
+
+                    <TextView
+                        android:id="@+id/minutes_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/minute"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cof" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blazered"
+                    android:padding="5dp" />
+
+                <!-- Seconds -->
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_uuid">
+
+                    <TextView
+                        android:id="@+id/second"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="00"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:fontFamily="@font/cof" />
+
+                    <TextView
+                        android:id="@+id/seconds_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/second"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/cof" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Menu Hack -->
+        <LinearLayout
+            android:id="@+id/awdawd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeraccount"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/cornertop">
+
+                <TextView
+                    android:id="@+id/texttag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/SafeMode"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/mfontx"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Switch Mode -->
+        <LinearLayout
+            android:id="@+id/switchmodd"
+            android:layout_below="@id/awdawd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!-- Left -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#2196F3"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/oth_status_mode"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/succ"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/Check_the_current_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Check_the_current_status"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/en_regular" />
+
+                <TextView
+                    android:id="@+id/modedetector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safe"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="18dp"
+                    android:fontFamily="@font/en_regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Options, Statuses, Updates, Show Protect and Container Layout -->
+        <!-- I can continue the full rest too if you confirm, as this will be huge -->
+
+    
+
+        <!-- Options, Statuses, Updates, Show Protect and Container Layout -->
+        <!-- I can continue the full rest too if you confirm, as this will be huge -->
+        <!-- Option Section -->
+        <LinearLayout
+            android:id="@+id/option"
+            android:layout_below="@id/switchmodd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|top"
+            android:background="@drawable/bg_find"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="10dp">
+
+            <!-- ESP Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:weightSum="2">
+
+                <RadioGroup
+                    android:id="@+id/groupesp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/esp64"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radiobutton"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/mfontx"
+                        android:gravity="center"
+                        android:text="@string/_64_bit_" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Mode Selection -->
+            <LinearLayout
+                android:id="@+id/menuselectesp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:weightSum="2">
+
+                <RadioGroup
+                    android:id="@+id/groupmode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/system"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radiobutton"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/mfontx"
+                        android:gravity="center"
+                        android:text="@string/system" />
+
+                    <RadioButton
+                        android:id="@+id/kernel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radiobutton"
+                        android:button="@null"
+                        android:fontFamily="@font/mfontx"
+                        android:gravity="center"
+                        android:text="@string/kernel" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- SSM Button -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_uuid"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/ssm"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <!-- Status Selection -->
+            <LinearLayout
+                android:id="@+id/awdowadjowdj"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioGroup
+                    android:id="@+id/groupstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/espsafe"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_radiobutton"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/mfontx"
+                        android:gravity="center"
+                        android:text="@string/safe_" />
+
+                    <RadioButton
+                        android:id="@+id/espunsafe"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/selector_radiobutton"
+                        android:button="@null"
+                        android:fontFamily="@font/mfontx"
+                        android:gravity="center"
+                        android:text="@string/unsafe" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Updates Resource -->
+            <LinearLayout
+                android:id="@+id/updatesresource"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shadow"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/baseline_construction_24"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/updates_resource"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Show Protect -->
+            <LinearLayout
+                android:id="@+id/showprotect"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shadow"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/external"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/go_main"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Antiban Menu -->
+        <LinearLayout
+            android:id="@+id/menuantiban"
+            android:layout_below="@id/option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/button_coming"
+            android:backgroundTint="@color/secodary"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_install"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/protection"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Container Mode -->
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_below="@id/option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_find"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/recyle"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

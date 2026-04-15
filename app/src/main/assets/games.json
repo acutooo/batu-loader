@@ -1,0 +1,34 @@
+{
+    "gamesList": [
+    {
+      "title": "GLOBAL",
+      "package": "com.tencent.ig",
+      "version": "4.3",
+      "status": "Only Esp Safe"
+    },
+    {
+      "title": "KOREA",
+      "package": "com.pubg.krmobile",
+      "version": "4.3",
+      "status": "Esp Safe"
+    },
+      {
+        "title": "VIETNAM",
+        "package": "com.vng.pubgmobile",
+        "version": "4.3",
+        "status": "Super Safe"
+      },
+    {
+      "title": "TAIWAN",
+      "package": "com.rekoo.pubgm",
+      "version": "4.3",
+      "status": "Super Safe"
+    },
+      {
+        "title": "INDIA",
+        "package": "com.pubg.imobile",
+        "version": "4.3",
+        "status": "Süper Safe"
+      }
+  ]
+}

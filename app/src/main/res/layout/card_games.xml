@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="15dp"
+    android:elevation="20dp"
+    android:background="@drawable/bg_uuid"
+  
+    app:cardUseCompatPadding="true"
+    app:contentPadding="16dp"
+    android:id="@+id/cardgame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="0.7">
+
+                <ImageView
+                    android:id="@+id/gameIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/pubg_global" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/gameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="PUBGM MOBILE"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/font"/>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    >
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:text="@string/version" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/font"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/gameVersion"
+                        android:text="@android:string/unknownName" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/gameStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Safe"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/font"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:enabled="false"
+                android:gravity="center"
+                android:background="@drawable/button_coming"
+                android:backgroundTint="@color/background"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:id="@+id/noBtn"
+                android:paddingTop="8dp"
+                android:text="@string/uninstall_game"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:gravity="center"
+                android:background="@drawable/button_coming"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:id="@+id/okBtn"
+                android:paddingTop="8dp"
+                android:text="@string/install_game"
+                android:textStyle="normal" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
